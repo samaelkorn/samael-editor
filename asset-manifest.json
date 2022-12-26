@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/samael-editor/static/css/main.18e00584.css",
+    "main.js": "/samael-editor/static/js/main.cac24de0.js",
+    "static/js/787.d20090e2.chunk.js": "/samael-editor/static/js/787.d20090e2.chunk.js",
+    "index.html": "/samael-editor/index.html",
+    "main.18e00584.css.map": "/samael-editor/static/css/main.18e00584.css.map",
+    "main.cac24de0.js.map": "/samael-editor/static/js/main.cac24de0.js.map",
+    "787.d20090e2.chunk.js.map": "/samael-editor/static/js/787.d20090e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18e00584.css",
+    "static/js/main.cac24de0.js"
+  ]
+}
