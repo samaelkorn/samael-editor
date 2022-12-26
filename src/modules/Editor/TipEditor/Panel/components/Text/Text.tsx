@@ -26,6 +26,37 @@ export const Text: React.FC<TP> = ({ editor }) => {
         editor.chain().focus().toggleHeading({ level: number }).run()
     }
 
+    const colors = [
+        {
+            name: 'red',
+            field: '#fa0b0b'
+        },
+        {
+            name: 'blue',
+            field: '#00b3ff'
+        },
+    ]
+
+    const changeColor = (color: string) => {
+        editor.chain().focus().setColor(color).run()
+    }
+
+    const align = [
+        {
+            name: 'left',
+        },
+        {
+            name: 'center',
+        },
+        {
+            name: 'right',
+        },
+    ]
+
+    const changeAlign = (aling: string) => {
+        editor.chain().focus().setTextAlign(aling).run()
+    }
+
     return (
         <Box sx={{ marginBottom: 2 }}>
             <Typography>Текст</Typography>
@@ -40,7 +71,7 @@ export const Text: React.FC<TP> = ({ editor }) => {
                     )}
                 </ButtonGroup>
             </Box>
-            <Box>
+            <Box sx={{ marginBottom: 2 }}>
                 <ButtonGroup variant="contained" size="small">
                     {types.map((item =>
                         <Button key={item.name}
@@ -49,6 +80,34 @@ export const Text: React.FC<TP> = ({ editor }) => {
                             {item.name}
                         </Button>)
                     )}
+                </ButtonGroup>
+            </Box>
+            <Box sx={{ marginBottom: 2 }}>
+                <ButtonGroup variant="contained" size="small">
+                    {colors.map((item =>
+                        <Button key={item.name}
+                            onClick={() => changeColor(item.field)}
+                            color={editor.isActive('textStyle', { color: item.field }) ? 'primary' : 'inherit'}>
+                            {item.name}
+                        </Button>)
+                    )}
+                    <Button onClick={() => editor.chain().focus().unsetColor().run()} color="inherit">
+                        Clear
+                    </Button>
+                </ButtonGroup>
+            </Box>
+            <Box sx={{ marginBottom: 2 }}>
+                <ButtonGroup variant="contained" size="small">
+                    {align.map((item =>
+                        <Button key={item.name}
+                            onClick={() => changeAlign(item.name)}
+                            color={editor.isActive({ textAlign: item.name }) ? 'primary' : 'inherit'}>
+                            {item.name}
+                        </Button>)
+                    )}
+                    <Button onClick={() => editor.chain().focus().unsetTextAlign().run()} color="inherit">
+                        Clear
+                    </Button>
                 </ButtonGroup>
             </Box>
         </Box>

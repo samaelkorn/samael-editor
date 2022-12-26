@@ -2,7 +2,7 @@ import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import type { Editor } from '@tiptap/react'
 
-import { Text, Image, Table } from './components'
+import { Text, Image, Table, Save } from './components'
 
 interface TP {
     editor: Editor
@@ -16,6 +16,7 @@ export const Panel: React.FC<TP> = ({ editor }) => {
                 <Text editor={editor} />
                 <Image editor={editor} />
                 <Table editor={editor} />
+                <Save editor={editor} />
             </Box>
         </Paper>
     )
