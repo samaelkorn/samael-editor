@@ -1,0 +1,1 @@
+export { AreaEditor } from './AreaEditor'
