@@ -28,7 +28,6 @@ const CustomTableCell = TableCell.extend({
 })
 
 export const Editor: React.FC = () => {
-
     const editor = useEditor({
         extensions: [
             StarterKit,
