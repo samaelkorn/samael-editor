@@ -16,21 +16,13 @@ export const Save: React.FC<TP> = ({ editor }) => {
         {
             id: ' html',
             name: 'Html',
-            handler: () => alert(editor.getHTML())
-        },
-        {
-            id: ' json',
-            name: 'Json',
-            handler: () => {
-                alert('Объект в консоле')
-                console.log(editor.getJSON())
-            }
+            handler: () => localStorage.setItem('saveHtml', editor.getHTML())
         },
     ]
 
     return (
         <Box sx={{ marginBottom: 2 }}>
-            <Typography>Вывести</Typography>
+            <Typography>Сохранить</Typography>
             <Box sx={{ marginBottom: 2 }}>
                 <ButtonGroup variant="contained" size="small">
                     {buttons.map((item =>

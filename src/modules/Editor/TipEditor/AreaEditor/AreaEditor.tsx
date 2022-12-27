@@ -1,16 +1,15 @@
 import { EditorContent } from '@tiptap/react'
-import type { Editor } from '@tiptap/react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
+import { useEditor } from 'modules/Editor/TipEditor/Context'
 
 import './style.scss'
 
-interface TP {
-    editor: Editor
-}
+export const AreaEditor: React.FC = () => {
 
-export const AreaEditor: React.FC<TP> = ({ editor }) => {
+    const { editor } = useEditor()
+
     return (
         <Box sx={{ padding: 2, height: '100vh' }}>
             <Paper sx={{ height: '100%' }}>
