@@ -57,9 +57,26 @@ export const Text: React.FC<TP> = ({ editor }) => {
         editor.chain().focus().setTextAlign(aling).run()
     }
 
+    const sizes = ['12', '14', '16', '30']
+
+    const chageSizes = (font: string) => {
+        editor.chain().focus().setFontSize(font).run()
+    }
+
     return (
         <Box sx={{ marginBottom: 2 }}>
             <Typography>Текст</Typography>
+            <Box sx={{ marginBottom: 2 }}>
+                <ButtonGroup variant="contained" size="small">
+                    {sizes.map((item =>
+                        <Button key={item}
+                            onClick={() => chageSizes(item)}
+                            color="inherit">
+                            {item}px
+                        </Button>)
+                    )}
+                </ButtonGroup>
+            </Box>
             <Box sx={{ marginBottom: 2 }}>
                 <ButtonGroup variant="contained" size="small">
                     {levels.map((item =>
