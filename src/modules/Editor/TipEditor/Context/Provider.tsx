@@ -11,7 +11,7 @@ import { Color } from '@tiptap/extension-color'
 import TextStyle from '@tiptap/extension-text-style'
 import Paragraph from '@tiptap/extension-paragraph'
 import TextAlign from '@tiptap/extension-text-align'
-import { TextStyleExtended } from './Extension/TextSize'
+import { TextSize } from './Extension/TextSize'
 
 import { save } from './save'
 
@@ -55,7 +55,7 @@ export const Provider = ({ children }: TP) => {
             TextAlign.configure({
                 types: ['heading', 'paragraph'],
             }),
-            TextStyleExtended
+            TextSize
         ],
         content: save()
     })
