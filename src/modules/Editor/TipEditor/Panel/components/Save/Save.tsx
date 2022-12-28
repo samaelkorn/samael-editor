@@ -9,9 +9,6 @@ interface TP {
 }
 
 export const Save: React.FC<TP> = ({ editor }) => {
-
-
-
     const buttons = [
         {
             id: ' html',

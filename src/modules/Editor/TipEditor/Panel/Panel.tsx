@@ -2,7 +2,7 @@ import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 
 import { useEditor } from 'modules/Editor/TipEditor/Context'
-import { Text, Image, Table, Save, TypePage } from './components'
+import { Text, Image, Table, Save, TypePage, Link } from './components'
 
 
 export const Panel: React.FC = () => {
@@ -16,6 +16,7 @@ export const Panel: React.FC = () => {
                 <Text editor={editor} />
                 <Image editor={editor} />
                 <Table editor={editor} />
+                <Link editor={editor} />
                 <Save editor={editor} />
             </Box>
         </Paper>

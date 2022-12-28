@@ -20,7 +20,7 @@ export const Image: React.FC<TP> = ({ editor }) => {
     return (
         <Box sx={{marginBottom: 2}}>
             <Typography>Изображение</Typography>
-            <Button onClick={addImage}>Добавить</Button>
+            <Button onClick={addImage} variant="contained" size="small">Добавить</Button>
         </Box>
     )
 }
