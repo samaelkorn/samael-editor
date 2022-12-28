@@ -19,13 +19,13 @@ export const TypePage = () => {
     return (
         <Box sx={{ marginBottom: 2 }}>
             <Typography>Тип страницы</Typography>
-            <Button onClick={() => setType('fullWidth')} color="inherit">
+            <Button onClick={() => setType('fullWidth')} size="small" variant="contained" sx={{ marginRight: 1 }}>
                 fullWidth
             </Button>
-            <Button onClick={() => setType('image')} color="inherit">
+            <Button onClick={() => setType('image')} size="small" variant="contained" sx={{ marginRight: 1 }}>
                 image
             </Button>
-            {type === 'image' && <Button onClick={() => addImage()} color="inherit">
+            {type === 'image' && <Button onClick={() => addImage()} size="small" variant="contained">
                 setImage
             </Button>}
         </Box>
