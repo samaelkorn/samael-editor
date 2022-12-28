@@ -10,6 +10,8 @@ import TableRow from '@tiptap/extension-table-row'
 import { Color } from '@tiptap/extension-color'
 import TextStyle from '@tiptap/extension-text-style'
 import TextAlign from '@tiptap/extension-text-align'
+import FontFamily from '@tiptap/extension-font-family'
+
 import { TextSize } from './Extension/TextSize'
 import { ButtonExtension } from './Extension/Button'
 
@@ -55,7 +57,8 @@ export const Provider = ({ children }: TP) => {
                 types: ['heading', 'paragraph'],
             }),
             TextSize,
-            ButtonExtension
+            ButtonExtension,
+            FontFamily
         ],
         content: save()
     })

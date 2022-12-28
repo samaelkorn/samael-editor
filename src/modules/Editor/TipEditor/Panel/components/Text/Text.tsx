@@ -63,6 +63,25 @@ export const Text: React.FC<TP> = ({ editor }) => {
         editor.chain().focus().setFontSize(font).run()
     }
 
+    const fonts = [
+        {
+            name: 'comic',
+            fields: 'Comic Sans MS, Comic Sans'
+        },
+        {
+            name: 'сaveat',
+            fields: "'Caveat', cursive;"
+        },
+        {
+            name: 'kelly',
+            fields: "'Kelly Slab', cursive;"
+        },
+    ]
+
+    const handleFonts = (font: string) => {
+        editor.chain().focus().setFontFamily(font).run()
+    }
+
     return (
         <Box sx={{ marginBottom: 2 }}>
             <Typography>Текст</Typography>
@@ -75,6 +94,20 @@ export const Text: React.FC<TP> = ({ editor }) => {
                             {item}px
                         </Button>)
                     )}
+                </ButtonGroup>
+            </Box>
+            <Box sx={{ marginBottom: 2 }}>
+                <ButtonGroup variant="contained" size="small">
+                    {fonts.map((item =>
+                        <Button key={item.name}
+                            onClick={() => handleFonts(item.fields)}
+                            color={editor.isActive('textStyle', { fontFamily: item.fields }) ? 'primary' : 'inherit'}>
+                            {item.name}
+                        </Button>)
+                    )}
+                    <Button onClick={() => editor.chain().focus().unsetFontFamily().run()} color="inherit">
+                        Clear
+                    </Button>
                 </ButtonGroup>
             </Box>
             <Box sx={{ marginBottom: 2 }}>

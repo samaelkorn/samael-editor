@@ -2056,6 +2056,11 @@
   dependencies:
     tippy.js "^6.3.7"
 
+"@tiptap/extension-font-family@^2.0.0-beta.209":
+  version "2.0.0-beta.209"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-font-family/-/extension-font-family-2.0.0-beta.209.tgz#003c676a7a90749bac21ef6b2fb01596fbe36d44"
+  integrity sha512-/BVU0PgvBUxeelm/cYlCN0Zbou1l9n07RNUBCTJPIfIXIj08EIHR/+Xm8LE364LrfvC6Hgakxw7KpzuaL7wiLg==
+
 "@tiptap/extension-gapcursor@^2.0.0-beta.209":
   version "2.0.0-beta.209"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-gapcursor/-/extension-gapcursor-2.0.0-beta.209.tgz#91eadf2863cfd6ba0325d378aff49af95c2783b5"

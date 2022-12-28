@@ -9,13 +9,15 @@ import './style.scss'
 export const AreaEditor: React.FC = () => {
     const { editor } = useEditor()
 
-    const handle = () => {
-        editor.commands.focus('end')
+    const handle = (target: any) => {
+        if (target.classList && target.classList.contains('MuiPaper-root')) {
+            editor.commands.focus('end')
+        }
     }
 
     return (
         <Box sx={{ padding: 2, height: '100vh' }}>
-            <Paper sx={{ height: '100%' }} onClick={() => handle()}>
+            <Paper sx={{ height: '100%' }} onClick={({ target }) => handle(target)}>
                 <Typography>Введите текст</Typography>
                 <EditorContent editor={editor} />
             </Paper>
